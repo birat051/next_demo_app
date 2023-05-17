@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import styles from '../../styles/Comments.module.scss'
 
 function CommentsPage() {
     const [commentdata, setcommentdata] = useState([])
@@ -48,8 +49,8 @@ function CommentsPage() {
         }
     }
   return (
-    <div>
-        <h1>Comments Page</h1>
+    <div className={styles.commentContainer}>
+        <h1 className={styles.pageHeading}>Comments Page</h1>
         <input type='text' value={newComment} onChange={(e)=>setnewComment(e.target.value)} placeholder='Enter a comment'></input>
         <br></br>
         <button onClick={submitComment}>Post</button>

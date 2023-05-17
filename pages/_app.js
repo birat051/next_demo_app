@@ -1,5 +1,17 @@
 import '@/styles/globals.css'
+import { ThemeProvider } from 'styled-components'
+
+const theme={
+  colors: {
+    primary: 'yellow',
+    secondary: 'blue'
+  }
+}
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+  <Component {...pageProps} />
+  </ThemeProvider>
+  )
 }
