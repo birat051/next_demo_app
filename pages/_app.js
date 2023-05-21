@@ -1,3 +1,5 @@
+import CustomFooter from '@/components/layout/footer'
+import HeaderComponent from '@/components/layout/header'
 import '@/styles/globals.css'
 import { ThemeProvider } from 'styled-components'
 
@@ -11,7 +13,9 @@ const theme={
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
+      <HeaderComponent />
   <Component {...pageProps} />
+  <CustomFooter />
   </ThemeProvider>
   )
 }

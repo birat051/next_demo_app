@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import styles from '../../styles/Comments.module.scss'
+import styles from 'styles/Comments.module.scss'
 
 function CommentsPage() {
     const [commentdata, setcommentdata] = useState([])

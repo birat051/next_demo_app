@@ -13,8 +13,8 @@ function ShoesPage() {
         <Image src={img} placeholder='blur' alt='red shoe by nike' height='500'/>
         {['2','3','4','5'].map((path)=>{
             return (
-            <div>
-            <Image key={path} src={`/shoe${path}.jpg`} height='500' width='300' blurDataURL='/blur.jpg'/>
+            <div key={path}>
+            <Image  src={`/shoe${path}.jpg`} height='500' width='300' blurDataURL='/blur.jpg'/>
             </div>
             )
         })}
