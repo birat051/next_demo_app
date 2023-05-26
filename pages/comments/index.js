@@ -70,4 +70,9 @@ function CommentsPage() {
   )
 }
 
+CommentsPage.getLayout = function CommentsLayout(page)
+{
+    return ({page})
+}
+
 export default CommentsPage

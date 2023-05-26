@@ -10,7 +10,18 @@ const theme={
   }
 }
 
+
+
 export default function App({ Component, pageProps }) {
+
+  if(Component.getLayout)
+  {
+    return (
+      <ThemeProvider theme={theme}>
+  <Component {...pageProps} />
+  </ThemeProvider>
+    )
+  }
   return (
     <ThemeProvider theme={theme}>
       <HeaderComponent />
